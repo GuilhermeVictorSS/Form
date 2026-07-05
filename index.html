@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        body{
+            background-image: linear-gradient(to left, rgb(70, 70, 70), rgb(22, 22, 22));
+            padding: 1% 30% 1% 30%;
+            font-family: 'Times New Roman', Times, serif;
+            color: white;
+            flex-wrap: wrap;
+        }
+        
+        fieldset{
+            background-color: rgba(0, 0, 0, 0.6);
+            border: none;
+            border-radius: 20px;
+            padding: 4%;
+        }
+
+        .form{
+            border: 1px solid white;
+            padding: 0% 3% 3% 3%;
+        }
+
+        .input{
+            background: none;
+            border: none;
+            border-bottom: 1px solid white;
+            outline: none;
+            font-size: 15px;
+            width: 80%;
+            color: white;
+            display: block;
+            text-align: center;
+        }
+        label{
+            display: block;
+            text-align: center;
+        }
+
+        input, select, textarea, button{
+            display: block;
+            margin: auto;
+        }
+
+        h1, h2, h3, p{
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <form>
+    <fieldset>
+        <div class="form">
+            <br>
+            <!--Título-->
+        <h2 style="text-align: center;">Formulário sobre a avaliação desse formulário</h2>
+        <p style="text-align: center; font-size: 14px;">Avalie esse formulário</p>
+        <hr size="1px" width="40%" solid white>
+        <br>
+        <!--Identificação-->
+        <h3>Seção 1</h3>
+        <p style="text-align: center; font-size: 14px;">Suas informações</p> 
+        <br><br>       
+        <div>
+            <!--Nome-->
+            <label>Nome</label>
+            <input class="input" type="text" name="nome" id="nome" required>
+        </div>
+        <br><br>
+        <div>
+            <!--Sobrenome-->
+            <label>Sobrenome</label>
+            <input class="input" type="text" name="sobrenome" id="sobrenome" required>
+        </div>
+        <br><br>
+        <div>
+            <!--Email-->
+            <label>Email</label>
+            <input class="input" type="email" name="email" id="email" required>
+        </div>
+        <br><br>
+            <!--Avaliação-->
+            <h3>Seção 2</h3>
+            <p style="text-align: center; font-size: 14px;">Avalie o formulário</p> 
+            <br><br> 
+            <div>
+            <!--Nota-->
+            <label><b>Que nota você daria para esse formulário?</b></label>
+            <!--Opção 1-->
+            <br>
+            <label>
+                <input type="radio" name="nota" value="Incrível">Incrível
+            </label>
+            <br>
+            <!--Opção 2-->
+            <label>
+                <input type="radio" name="nota" value="Regular">Regular
+            </label>
+            <br>
+            <!--Opção 3-->
+            <label>
+                <input type="radio" name="nota" value="Bom">Bom
+            </label>
+            <br>
+            <!--Opção 4-->
+            <label>
+                <input type="radio" name="nota" value="Muito bom">Muito bom
+            </label>
+            <br>
+            <!--Opção 5-->
+            <label>
+                <input type="radio" name="nota" value="Melhor que muito bom" checked>Melhor que muito bom
+            </label>
+        </div>
+        <br><br>
+        <div>
+            <!--Data-->            
+            <label><b>Se esse formulário fosse uma data, que data ele seria?</b></label>
+            <br>
+            <input type="date" name="data" id="data" required>
+        </div>
+        <br><br>
+        <div>
+            <!--Cor-->            
+            <label><b>Que cor você daria para esse formulário?</b></label>
+            <br>
+            <input type="color" name="cor" id="cor" required>
+        </div> 
+        <br><br>
+        <div>
+            <!--Selecionar-->
+            <label><b>Para qual dessas pessoas você recomendaria esse formulário?</b></label>
+            <br>
+            <select id="pessoa" required>
+                <option selected disabled>Selecione</option>
+                <option>Rogério Lobo</option>
+                <option>Luan de E.F.</option>
+                <option>Alexandre de história</option>
+                <option>Asleep Tuna</option>
+                <option>Renatão</option>
+            </select>
+        </div>
+        <br><br>
+        <div>
+            <!--Checkbox-->
+            <label><b>Para quais membros da sua família você gostaria de compartilhar esse formulário?</b></label>
+            <br>
+        <input type="checkbox" id="p1" name="???1" id="p1" >
+        <label for="p1">Pais</label>
+        <input type="checkbox" id="p2" name="p2" id="p2" >
+        <label for="p2">Avós</label>
+        <input type="checkbox" id="???3" name="p3" id="p3" >
+        <label for="p3">Tios</label>
+        <input type="checkbox" id="p4" name="p4" id="p4" >
+        <label for="p4">Primos</label>
+        </div>
+        <br><br>
+        <div>
+            <!--Textarea-->
+            <label><b>Faça uma redação sobre o quão incrível foi esse formulário</b></label>
+            <br>
+            <textarea class="input" style="border-top: 1px solid white;" rows="6" id="redacao" name="redacao" required></textarea>
+        </div>
+        <br><br>
+        <button type="submit" name="submit" id="submit">Envie sua W resposta</button>
+        </div>
+    </fieldset>
+</form>
+</body>
+</html>
