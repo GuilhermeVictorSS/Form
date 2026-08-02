@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms2</title>
+    <style>
+fieldset {
+    padding: 2%;
+    border-radius: 15px;
+}
+section{
+    padding: 1% 4% 1% 4%;
+}
+    </style>
+</head>
+<body>
+    <section>
+    <form  method="post">
+        <fieldset id="usuario">
+            <legend><b>Identificação do Usuário</b></legend>
+            <p><label for="cNome">Nome</label><input type="text" name="tNome" id="cNome" size="20" maxlength="40" placeholder="Nome Completo" required/></p>
+            <p><label for="cEmail">Email</label><input type="email" name="tEmail" id="cEmail" size="40" placeholder="xxxxxxxxxx@xxxx.com" required/></p>
+            <p><label for="cSenha">Senha</label><input type="password" name="tSenha" id="cSenha" size="cSenha" placeholder="XXXXXXXXX" size="7" maxlength="7" minlength="5" required/></p>
+            <span id="senhaErro" class="error"></span>
+            <p><label for="cData">Data de Nascimento</label><input type="date" id="cData" name="tData" required></p>
+            <fieldset id="genero"><legend>Gênero</legend>
+                <input type="radio" name="tGen" id="cMas"/> <label for="cMas">Masculino</label><br>
+                <input type="radio" name="tGen" id="cFem"/> <label for="cFem">Feminino</label><br>
+                <input type="radio" name="tGen" id="MGomes"/> <label for="MGomes">Os dois né </label>
+            </fieldset>
+            <p><label for="cIdade">Faixa Etária</label><select name="tIdade" id="cIdade">
+                <option>14-16 anos</option>
+                <option>16-18 anos</option>
+                <option>18+</option>
+            </select></p>
+        </fieldset><br>
+        <fieldset id="curso">
+            <legend><b>Informações do Curso</b></legend>
+            <p><label for="cCurso">Curso</label><select name="tCurso" id="cCurso">
+                <option>Desenvolvimento de Sistemas</option>
+                <option>Administração</option>
+                <option>Enfermagem</option>
+                <option>Segurança de Trabalho</option>
+                </select></p>
+            <p><label for="cNum">Ano escolar(Ensino médio)</label><input type="number" name="tNum" id="cNum" min="1" max="3" required/></p>
+            <p><label>O que deseja com os Cursos</label></p>
+            <input type="checkbox" name="tOpt1" id="cOpt1" >
+            <label for="cOpt1">Melhorar o Currículo</label><br>
+            <input type="checkbox" name="tOpt2" id="cOpt2" >
+            <label for="cOpt2">Novos conhecimentos</label><br>
+            <input type="checkbox" name="tOpt3" id="cOpt3" >
+            <label for="cOpt3">Trabalhar na área</label><br><br>
+            <button type="submit">Cadastrar</button>
+        </fieldset>
+    </form>
+    </section>
+</body>
+</html>
